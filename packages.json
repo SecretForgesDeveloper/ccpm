@@ -1,0 +1,22 @@
+{
+    "opusos":{
+        "owner": "",
+        "type":"shell",
+        "command": "pastebin run UzGHLbNC"
+    },
+    "msb":{
+        "owner": "",
+        "type": "shell",
+        "command":"mbs install"
+    },
+    "musicify":{
+        "owner": "",
+        "type":"shell",
+        "command": "wget run https://raw.githubusercontent.com/RubenHetKonijn/musicify/main/install.lua"
+    },
+    "oneos": {
+        "owner": "",
+        "type": "shell",
+        "command": "pastebin run E1xftzLa"
+    }
+}
