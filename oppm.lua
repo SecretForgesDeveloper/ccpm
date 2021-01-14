@@ -1,4 +1,4 @@
-local packageURL = ""
+local packageURL = "https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/packages.json"
 
 local handle = http.get(packageURL)
 local index = handle.readAll()
@@ -19,7 +19,7 @@ end
 function listPackages()
     print("Package List:")
     for k, v in pairs(packages)
-        print(k.." by "..v[1])
+        print(k.." by "..v.owner)
     end
     print("If you can't see all the packages, do 'ccpm install mbs'")
 end
