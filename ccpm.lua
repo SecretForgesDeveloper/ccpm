@@ -30,7 +30,7 @@ function installPackage(packageName)
     else
         if not packages[packageName].type then
             print("Package name not found!")
-        elseif packages[packageName].type = "shell" then
+        elseif packages[packageName].type == "shell" then
             shell.run(packages[packageName].command)
             print("Package successfully installed")
         end
