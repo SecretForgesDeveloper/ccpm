@@ -17,4 +17,4 @@ wget
 
 ## Suggestion?
 
-You want a package on this program? Just create a 
+You want a package on this program? Just create a suggestion issue and we will look at it
