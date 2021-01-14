@@ -18,7 +18,7 @@ end
 
 function listPackages()
     print("Package List:")
-    for k, v in pairs(packages)
+    for k, v in pairs(packages) do
         print(k.." by "..v.owner)
     end
     print("If you can't see all the packages, do 'ccpm install mbs'")
