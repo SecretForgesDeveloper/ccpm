@@ -27,11 +27,11 @@ function listPackages()
     end
 end
 
-function installPackage(packageName)
-    if not index.packages[packageName] then
+function installPackage(packageNum)
+    if not index.packages[packageNum] then
         print("Package not found")
     else
-        shell.run(index.packages[packageName].command)
+        shell.run(index.packages[packageNum].command)
         print("Installed successfully")
     end
 end
