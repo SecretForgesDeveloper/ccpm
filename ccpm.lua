@@ -3,7 +3,7 @@ local packageURL = "https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm
 local handle = http.get(packageURL)
 local indexJson = handle.readAll()
 handle.close()
-local index = textutils.unserialise(indexJson)
+local index = textutils.unserialiseJSON(indexJson)
 if not index then
     error("The index is malformed")
 end
