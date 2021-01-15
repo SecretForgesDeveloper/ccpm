@@ -12,7 +12,7 @@ CCPM is licensed under the [GNU General Public License v3.0](LICENSE).
 
 To install, run:
 ```shell
-wget https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/oppm.lua
+wget https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/ccpm.lua
 ```
 
 ## Suggestion?
