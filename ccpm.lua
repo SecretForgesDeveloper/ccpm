@@ -1,9 +1,10 @@
 local packageURL = "https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/packages.json?cb=".. os.epoch("utc")
 
 local handle = http.get(packageURL)
-local index = handle.readAll()
-local packages = textutils.unserialise(index)
-if not packages then
+local indexJson = handle.readAll()
+handle.close()
+local index = textutils.unserialise(indexJson)
+if not index then
     error("The index is malformed")
 end
 local version = "0.0.1"
