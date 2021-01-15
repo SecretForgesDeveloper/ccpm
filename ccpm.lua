@@ -22,16 +22,16 @@ end
 
 function listPackages()
     print("Package List:")
-    for i in pairs(packages.packages) do
+    for i in pairs(index.packages) do
         print(i .. " | " .. index.packages[i].author .. " - " .. index.packages[i].name)
     end
 end
 
 function installPackage(packageName)
-    if not packages.packages[packageName] then
+    if not index.packages[packageName] then
         print("Package not found")
     else
-        shell.run(packages.packages[packageName].command)
+        shell.run(index.packages[packageName].command)
         print("Installed successfully")
     end
 end
