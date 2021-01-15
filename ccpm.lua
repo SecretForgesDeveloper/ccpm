@@ -23,7 +23,7 @@ end
 function listPackages()
     print("Package List:")
     for i in pairs(index.packages) do
-        print(i .. " | " .. index.packages[i].author .. " - " .. index.packages[i].name)
+        print(i .. " | " .. index.packages[i].owner .. " - " .. index.packages[i].name)
     end
 end
 
