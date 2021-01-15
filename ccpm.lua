@@ -1,8 +1,11 @@
-local packageURL = "https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/packages.json"
+local packageURL = "https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/packages.json?cb=".. os.epoch("utc")
 
 local handle = http.get(packageURL)
 local index = handle.readAll()
 local packages = textutils.unserialise(index)
+if not packages then
+    error("The index is malformed")
+end
 local version = "0.0.1"
 local args = {...}
 
@@ -19,7 +22,7 @@ end
 function listPackages()
     print("Package List:")
     for k, v in pairs(packages) do
-        print(k.." by "..v.owner)
+        print(k)
     end
     print("If you can't see all the packages, do 'ccpm install mbs'")
 end
