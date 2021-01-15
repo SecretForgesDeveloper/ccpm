@@ -1,22 +1,28 @@
 {
-    "opusos":{
-        "owner": "kepler155c",
-        "type":"shell",
-        "command": "pastebin run UzGHLbNC"
-    },
-    "msb":{
-        "owner": "SquidDev",
-        "type": "shell",
-        "command":"mbs install"
-    },
-    "musicify":{
-        "owner": "RubenHetKonijn",
-        "type":"shell",
-        "command": "wget run https://raw.githubusercontent.com/RubenHetKonijn/musicify/main/install.lua"
-    },
-    "oneos": {
-        "owner": "oeed",
-        "type": "shell",
-        "command": "pastebin run E1xftzLa"
-    }
+    "packages": [
+        {
+            "name": "OpusOS",
+            "owner": "kepler155c",
+            "type":"shell",
+            "command": "pastebin run UzGHLbNC"
+        },
+        {
+            "name":"MBS",
+            "owner": "SquidDev",
+            "type": "shell",
+            "command":"mbs install"
+        },
+        {
+            "name":"Musicify",
+            "owner": "RubenHetKonijn",
+            "type":"shell",
+            "command": "wget run https://raw.githubusercontent.com/RubenHetKonijn/musicify/main/install.lua"
+        },
+        {
+            "name":"OneOS",
+            "owner": "oeed",
+            "type": "shell",
+            "command": "pastebin run E1xftzLa"
+        }
+    ]
 }

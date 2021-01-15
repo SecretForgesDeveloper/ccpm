@@ -21,22 +21,17 @@ end
 
 function listPackages()
     print("Package List:")
-    for k, v in pairs(packages) do
-        print(k)
+    for i in pairs(packages.packages) do
+        print(i .. " | " .. index.packages[i].author .. " - " .. index.packages[i].name)
     end
-    print("If you can't see all the packages, do 'ccpm install mbs'")
 end
 
 function installPackage(packageName)
-    if not packageName then
-        print("Please provide a package name!")
+    if not packages.packages[packageName] then
+        print("Package not found")
     else
-        if not packages[packageName].type then
-            print("Package name not found!")
-        elseif packages[packageName].type == "shell" then
-            shell.run(packages[packageName].command)
-            print("Package successfully installed")
-        end
+        shell.run(packages.packages[packageName].command)
+        print("Installed successfully")
     end
 end
 
