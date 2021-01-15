@@ -1,9 +1,17 @@
 local packageURL = "https://raw.githubusercontent.com/SecretForgesDeveloper/ccpm/main/packages.json?cb=".. os.epoch("utc")
 
 local handle = http.get(packageURL)
-print("Get packageURL")
+if handle then
+    print("Get packageURL")
+else
+    error("Get packageURL")
+end
 local index = handle.readAll()
-print("readAll")
+if index then
+    print("readAll")
+else
+    error("readAll")
+end
 local packages = textutils.unserialise(index)
 print("unserialise index")
 if not packages then
